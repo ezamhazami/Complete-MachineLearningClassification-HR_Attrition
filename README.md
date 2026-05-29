@@ -21,7 +21,7 @@ Machine Learning Lifecyle
    ii) train / validation / test
    iii) Cross validation (stratified KFold) - use for small dataset <1000 rows
 7) Model Preprocessing (train - fit_transform, test - transform ONLY - to avoid data leakage)
-   i) Imputation - we can input via SimpleImputer, fillna, KNNImputer(finds similar rows to estimate missing value (slower, often better))
+   i) Imputation - we can input via SimpleImputer, fillna, KNNImputer(finds similar rows to   estimate missing value (slower, often better))
        - (median for numerical, mode for categorical)
    ii) Encoding
        - Label Encoding = for binary / tree based model
@@ -36,7 +36,30 @@ Machine Learning Lifecyle
        print(y_train.value_counts(normalize=True)), If minority class < 15% → you likely need balancing , if minority 20% - 50% -> try class_weight
        - Class weight
        - SMOTE - create a synthethic data , minority oversampling
-       - SMOTETomek - Oversample minority and undersample majority 
+       - SMOTETomek - Oversample minority and undersample majority
+8) Model Training
+    i) baseline model - compare , fit , score , y_pred, y_proba
+9) Hyperparameter Tuning
+    i) RandomizedSearchCV - faster , n_itter=50 try 50 combo
+    ii) GridSearchCV - use on small grid , crossfold
+    iii) Threshold Tuning - adjust decision boundary , normal is 0.5, increase threashold lead fewer positive, higher precssion with low recall
+10) Model Evaluation
+    i) Binary Classification Evaluation -Classification report, Accuracy, precision, f1, recall, ROC-AUC, Log Loss, Jaccard Index, Hamming Lose
+    ii) Confusion Matrix - tpfptnfn,
+    iii) ROC Curve and AUC , AUC = 0.7 acceptable, 0.8 good, measure how well the model seperate classes across all threshould
+    iv) Regression Evaluation - mean absolute error, mean squared error, rmse, explained varience score (evs),
+    v) Residual Analysis
+11) Model Deployment
+    i) pickle and joblib , .pkl (artefacts)
+    ii) Streamlit - webapp
+    iii) Gradio
+    iv) Flask REST API
+    v) Model Monitoring - detect when model degrades overtimes (Data changes, process changes)
+      
+   
+   
+   
+
    
    
    
