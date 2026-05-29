@@ -16,7 +16,7 @@ Machine Learning Lifecyle
    i) fix datatypes ii) handle duplicates
    iii) Outlier detection IQR method , if <500 use Winsorising, Z-score method
 5) Feature Engineering - ways to make feature more impactful
-6) Model Training (always split before preprocessing to avoid data leakage) - there are 3 types of model training
+6) Train / Test Split (always split before preprocessing to avoid data leakage) - there are 3 types of model training
    i) Standard train / test split + stratify=y (to keep class ratios equal)
    ii) train / validation / test
    iii) Cross validation (stratified KFold) - use for small dataset <1000 rows
